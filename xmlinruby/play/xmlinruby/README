@@ -1,0 +1,67 @@
+--------------------------------
+XML in Ruby - Templating Engine
+--------------------------------
+
+COPYRIGHT
+
+  Copyright (c) 2007 by Michael Neumann (mneumann@ntecs.de).
+  Released under the same terms as Ruby.
+
+ABOUT
+
+  "XML in Ruby" is a simple templating engine that allows you to embed
+  XML directly into Ruby.
+
+EXAMPLE
+
+  See sample.rbx.
+  
+      class MyView < View
+        def index(title)
+          <html>
+            <head>
+              <title>${title}</title> 
+            </head>
+            <body>
+              render_body
+            </body>
+          </html>
+        end
+
+        def render_body
+          output "Hello World"
+        end
+      end
+
+      puts MyView.render(:index, "Test")
+
+  To start:
+
+      ruby -r view -e "View.require 'sample.rbx'" 
+
+  Output:
+
+      <html>
+      <head>
+      <title>Test</title>
+      </head>
+      <body>
+      Hello World</body>
+      </html>
+
+  You can mix XML and Ruby. Everything that starts with "<" as
+  fist non-whitespace character on a line is considered as XML. 
+  You can also use:
+
+      <: This is text 
+
+  to output the text " This is text", or require other
+  "templates" with:
+
+      View.require 'another_template.rbx'
+
+  In XML you can embed Ruby code with #{...} and ${...}. The second
+  performs escaping.
+
+
+END
