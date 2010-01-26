@@ -1,0 +1,66 @@
+--- %YAML:1.0
+PKG_TITLE: &title AOP
+PKG_NAME: aop
+PKG_VERSION: '0.0.1'
+PKG_AUTHOR: Thomas Sawyer and Peter Vanbroekhoven
+PKG_EMAIL: transami@runbox.com
+PKG_SUMMARY: Integrates Aspect Oriented Programming (AOP) features into Ruby
+PKG_DESCRIPTION: >
+  AOP provides a few well thought-out libraries for using AOP 
+  techniques in your Ruby programs. Presently this is 
+  experimental code for Ruby core AOP RCR project.
+  
+# site info
+# remark out if you don't need
+PKG_HOMEPAGE: 'http://developer.berlios.de/projects/suby/'
+PKG_RUBYFORGE_PROJECT:
+PKG_RUBYFORGE_PASS:
+
+# all package files
+PKG_FILES:
+  - 'lib/**/*'
+  - 'test/**/*'
+  - 'examples/**/*'
+  - 'doc/**/*'
+  - '[A-Z]*'
+  - 'Rakefile'
+  - 'Rake.yaml'
+
+# rdoc
+RDOC_TITLE: *title
+RDOC_DIR: doc
+RDOC_TEMPLATE: html
+RDOC_OPTIONS: ''
+RDOC_INCLUDE: [ 'VERSION', 'README', 'CHANGE', 'TODO', 'COPY', 'LICENSE', 'lib/**/*.rb', 'bin/**/*.rb' ]
+RDOC_EXCLUDE: []
+
+# include in distribution
+PKG_DIST_DIRS: [ 'bin', 'lib', 'test', 'examples' ]
+PKG_DIST_FILES:
+  - README
+  - TODO
+  - CHANGE
+  - VERSION
+  - LICENSE
+  - COPY
+  - Rakefile
+  - Rake.yaml
+
+# tests
+PKG_TEST_DIR: test
+PKG_TEST_FILES:
+  - 'test/*_test.rb'
+  - 'test/**/*_test.rb'
+
+# library files for manual install
+PKG_LIB_DIR: lib
+PKG_LIB_MKDIRS: '**/*/'
+PKG_LIB_FILES:
+  - '**/*.rb'
+  - '**/*.yaml'
+PKG_LIB_DEPRECATE: []
+
+# binary files for manual install
+PKG_BIN_DIR: bin
+PKG_BIN_FILES: '**/*'
+PKG_BIN_DEPRECATE: []
