@@ -1,0 +1,77 @@
+= Association
+
+  http://death.rubyforge.org
+
+
+== DESCRIPTION
+
+General binary associations allows one object to be
+associated with another. It has a variety of uses,
+link-lists, simple ordered maps and mixed collections,
+among them.
+
+
+== FEATURES/ISSUES
+
+* Create linked-lists with operator (#>>).
+* Operator notation does not work for:
+  * Bignum
+  * Fixnum
+  * Date
+  * IPAddr
+  * Process::Status
+  Or any other class that defines #>> for something else.
+* An object can have multiple associations.
+
+
+== RELEASE NOTES
+
+Please see RELEASE file.
+
+
+== SYNOPSIS
+
+Associations can be used to draw simple relationships.
+
+   :Apple >> :Fruit
+   :Apple >> :Red
+
+   :Apple.associations #=> [ :Fruit, :Red ]
+
+It can also be used for simple lists of ordered pairs.
+
+   c = [ :a >> 1, :b >> 2 ]
+   c.each { |k,v| puts "#{k} associated with #{v} }
+
+produces
+
+   a associated with 1
+   b associated with 2
+
+
+== HOW TO INSTALL
+
+Describe your installation procedure here.
+
+To install with RubyGems simply open a console and type:
+
+  gem install association
+
+Local installation requires Setup.rb (gem install setup),
+then download the tarball package and type:
+
+  tar -xvzf association-1.0.0.tgz
+  cd association-1.0.0
+  sudo setup.rb all
+
+Windows users use 'ruby setup.rb all'.
+
+
+== COPYING
+
+Copyright (c) 2005 The Coding Dead
+
+This program is ditributed unser the terms of the LGPLv3 license.
+
+See LICENSE file for details.
+

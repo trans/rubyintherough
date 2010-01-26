@@ -1,0 +1,4 @@
+General binary association allows one object to be
+associated with another. It has a variety of uses,
+link-lists, simple ordered maps and mixed collections,
+among them.
