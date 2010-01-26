@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+
+# MarkUps - Ruby Implementation of ArtML(tm)
+# Copyright (c) 2004 Thomas Sawyer
+
+require 'getoptlong'
+require 'markups'
+#require 'markups/artml'
+
+
+def help
+  puts %Q{
+  markup <filename1> [ <filename2> ... ]
+
+  options:
+    -h  --help
+    -v  --verbose
+    -d  --debug
+    -a  --adapter
+  }
+end
+
+if $0 == __FILE__
+
+  opts = GetoptLong.new(
+    [ "-h", "--help", GetoptLong::NO_ARGUMENT ],
+    [ "-v", "--verbose", GetoptLong::NO_ARGUMENT ],
+    [ "-d", "--debug", GetoptLong::NO_ARGUMENT ],
+    [ "-p", "--profile", GetoptLong::NO_ARGUMENT ],
+    [ "-a", "--adapter", GetoptLong::REQUIRED_ARGUMENT ]
+  )
+
+  opt_help = false
+  opt_adapter = :xml
+  opt_profile = false
+
+  opts.each do |opt, arg|
+    case opt
+    when '-h'
+      help
+      exit 0
+    when '-v'
+      $VERBOSE = true
+    when '-d'
+      $DEBUG = true
+    when '-a'
+      opt_adapter = arg.downcase.to_sym
+    when '-p'
+      opt_profile = true
+    end
+  end
+
+  raise 'no art file given' if ARGV.length == 0
+  art_file = ARGV[0]
+
+#  text = ''
+#  art_files = ARGV
+#  arts = art_files.each do |fi|
+#    File.open(fi) { |f| text << f.gets(nil) }
+#  end
+
+#  $stdout << MarkUps.markup( art_file, opt_adapter ) << "\n"
+
+  require 'profile' if opt_profile
+
+  MarkUps.markup( art_file, opt_adapter )
+
+end

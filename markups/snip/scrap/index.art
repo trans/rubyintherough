@@ -1,0 +1,20 @@
+--- !!art
+
+  +------------+--------+
+  | links      | img    |
+  |            |        |
+  |            |        |
+  |            |        |
+  +------------+--------+ 
+  
+--- !!data
+
+links: !linklist
+  items:
+    - About
+    - RDocs
+    - FAQ
+    - Wiki
+    - DevSite
+
+img: !image 'images/raspberry.jpg'

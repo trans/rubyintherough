@@ -1,0 +1,52 @@
+--- !artml.rubyforge.org,2004/components
+meta:
+  title: Fireworks
+fimg:
+  value: '<img src="../../images/firestarter.jpg" align="left" style="margin-bottom: 0x;">'
+title: |
+  h1. %{color: orange}Public% %{color: red}^Fire^% %{color: orange}Works%
+  %{font-size: 8pt; color: red; font-weight: normal}i am a fire strarter%
+menu:
+  value:
+    <b>TS Weblands</b><br/>
+    <a href="../banana/banana.html">Banana</a><br/>
+    <a href="../teasblog/blog.html">Tea</a><br/>
+    <br>
+    <a href="../../jupzeus/"><b>JupiterZeus</b></a><br/>
+entries:
+  - >
+    h2. %{color: red}Welcome%
+    
+    
+    Welcome to my Public ^Fire^ Works. This section contains an assortment
+    of material I have thought to make publically available,
+    whether incomplete or complete, believing it better
+    that they be available to others rather than
+    collecting virtual cobwebs. There is always the chance that
+    some of this material may serve as inspirational sparks for others,
+    and perhaps ultimately become full fireworks.<br>
+  - |
+    h2. %{color: red}Programming%
+    
+    * "Ruby Works":ruby/index.html <br>
+      Ruby is a subperb general purpose, modern scripting language. This is
+      my general purpose page on all things Ruby.<br><br>
+    * "Suby Works":http://suby.berlios.de/ ("Dev Site":http://developer.berlios.de/projects/suby/)<br>
+      Concepts on the development of a new programming language greatly
+      influenced by Ruby.<br/><br/>
+    * "XML to SQL Coupling":files/xml2sql.html <br>
+      What is the best way to store XML data in a Rational Database.<br/><br/>
+  - |
+    h2. %{color: red}Miscellaneous%
+        
+    * "Basis of Counting":files/count.html <br/>
+      What really is the best number system? <br/><br/>
+    * "Ideas & Inventions":files/ideas.html <br/>
+      An assorment of ideas and inventions. <br/><br/>
+    * "My Resume":files/resume.html <br/>
+      This is my current resume. Yes, the original <i>is</i> an HTML document. <br/><br/>
+google:
+  value: google ads here
+copyright: |
+  Copyright (c) 2004 Thomas Sawyer, All Rights Reserved.
+  This page was generated using ArtML with RedCloth/Textile technology. Do you "%{color: red}Ruby%":http://ruby-lang.org?

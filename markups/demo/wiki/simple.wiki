@@ -1,0 +1,10 @@
+
+== Section Blue
+
+p. Hello, World! This is a simple document
+demonstrating the XML nature of MarkUps.
+
+== Next Section
+
+More content.
+

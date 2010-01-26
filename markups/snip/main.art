@@ -1,0 +1,64 @@
+--- !artml.rubyforge.org,2004/layout |
+
+main .table
++----------+-----------------+------------+
+| f "fimg" | tc "title"      |  m "menu"  |
++----------+-----------------+------------+ 
+|                            | g "google" |
+| info                       |            |
+|                            |            |
++--------+-------------------+------------+
+| copy "copyright"                        |
++--------+-------------------+------------+
+! 100px  !                   ! 150px      !
+
+info
++=====================================+
+| ent "entries"                       |
++=====================================+
+! 100%                                !
+
+--- !artml.rubyforge.org,2004/style
+meta:
+  body:
+    background: orange
+main:
+  width: 800px
+  background: '#ffffff'
+  padding: 6px
+  width: 800px
+f:
+  text-align: center
+  background: yellow
+tc:
+  background: yellow
+  font-size: 16pt
+  font-family: sans-serif
+m:
+  background: yellow
+  font-family: sans-serif
+  font-size: 10pt
+  border: solid yellow 4px
+info:
+  padding-top: 10px
+  padding-left: 10px
+  padding-right: 10px
+  padding-bottom: 10px
+  border-spacing: 10px
+ent:
+  font-size: 9pt
+  font-family: sans-serif
+  font-weight: normal
+copy:
+  font-size: 6pt
+  font-family: sans-serif
+g:
+  text-align: center
+  vertical-align: top
+  font-family: sans-serif
+  font-size: 8pt
+  background: '#eeeeee'
+  border-left: 5px solid white
+  border-top: 5px solid white
+  border-bottom: 5px solid white
+  
