@@ -1,0 +1,2 @@
+Redirect $stdout, or other IO object, to a StringIO object,
+or any other object with a write() method.

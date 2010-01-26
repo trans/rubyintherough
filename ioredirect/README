@@ -1,0 +1,55 @@
+= IO::Redirector
+
+  http://death.rubyforge.org
+
+
+== DESCRIPTION
+
+A class to redirect $stdout, or other IO object, to a StringIO object,
+or any other object with a write() method.
+
+
+== FEATURES/ISSUES
+
+* ... to be done ...
+
+
+== RELEASE NOTES
+
+Please see RELEASE file.
+
+
+== SYNOPSIS
+
+   s = StringIO.new
+   r = Redirector.redirect($stdout, s) do
+     $stdout.puts "this is a test"
+   end
+
+
+== HOW TO INSTALL
+
+Describe your installation procedure here.
+
+To install with RubyGems simply open a console and type:
+
+  gem install ioredirect
+
+Local installation requires Setup.rb (gem install setup),
+then download the tarball package and type:
+
+  tar -xvzf ioredirect-1.0.0.tgz
+  cd ioredirect-1.0.0
+  sudo setup.rb all
+
+Windows users use 'ruby setup.rb all'.
+
+
+== COPYING
+
+Copyright (c) 2005 The Coding Dead
+
+This program is ditributed unser the terms of the LGPLv3 license.
+
+See LICENSE file for details.
+
