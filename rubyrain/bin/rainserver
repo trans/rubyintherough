@@ -1,0 +1,154 @@
+#!/usr/bin/env ruby
+
+require 'webrick'
+require 'optparse'
+require 'rain/rain'
+require 'facet/string/margin'
+
+require 'rain/servlet'
+
+module Rain
+
+  class Main
+
+    def initialize
+      @interface = 'console'
+      @verbose = false
+      @debug = false
+      setup_options
+    end
+
+    # Setup all the command options.
+    def setup_options
+
+      # Setup from command line arguments.
+
+      parser = OptionParser.new do |opts|
+
+        #opts.banner = "\n Ruby Rain, v#{Rain::VERSION}"
+        #opts.separator ''
+        #opts.separator '   Usage: rain [options] [command] [file]'
+        #opts.separator ''
+        #opts.separator '   Options:'
+
+        opts.banner = '  Options:'
+
+        ifaces = %w{ console web }
+        opts.on('-i', '--interface', ifaces, "Interface type (#{ifaces.join(',')}).") do |iface|
+          @interface = iface
+        end
+
+        #opts.on('-V', '--verbose', 'Verbose mode.') do
+        #  @verbose = true
+        #end
+
+        #opts.on('-d', '--debug', 'Run in debug mode.') do
+        #  @debug = true
+        #end
+
+        opts.on('-v', '--version', 'Show version.') do
+          puts "Rain #{Rain::VERSION}"
+          exit
+        end
+
+        opts.on('-h', '--help', 'Show this information.') do
+          help
+          puts opts
+          puts
+          exit
+        end
+
+      end
+
+      parser.parse!(ARGV)
+
+      return self
+    end
+
+    # Display help information.
+    def help
+      puts %{
+      |
+      |  Ruby Rain v#{Rain::VERSION}
+      |
+      |  Usage: rain [options] [command] [file]
+      |
+      |  Commands:
+      |    install     Install package(s).
+      |    remove      Remove package(s).
+      |    uninstall   Same as 'remove'.
+      |    sync        Sync local package catalog with master catalog.
+      |    update      Same as 'sync'.
+      |    upgrade     Upgrade package(s) to latest versions.
+      |    list        List all packages by name.
+      |    lookup      Search for a package by name.
+      |    detail      Like lookup but gives complete details.
+      |    help        Show this info (Same as options -h, --help).
+      |
+      }.margin
+      puts
+    end
+
+    # Run Rain
+    def go
+      #exit if ARGV.empty?
+
+      #ctrl = Rain.new( @interface )
+
+      cmd = ARGV[0].downcase if ARGV[0]
+      files = ARGV[1..-1]
+
+      case cmd
+      when 'install'
+        to_browser( %{install?drop="#{files[0]}"} )
+      when 'uninstall'
+
+      when 'sync', 'update'
+        #ctrl.sync
+      when 'upgrade'
+
+      when 'search'
+
+      when 'list'
+        to_browser( 'drops' )
+      when 'lookup'
+        to_browser( "lookup", :drop=>files.first )
+      #when 'detail'
+      #  to_browser( "detail", :drop=>files.first )
+      else
+        to_browser('')
+      end
+    end
+
+    def to_browser( cmd, hsh={} )
+      v = hsh.collect{ |k,v| %{#{k}="#{v}"} }
+      v = v.empty? ? '' : "?#{v.join("&")}"
+
+      fork do
+        sleep 2
+        `firefox http://localhost:9996/rain/#{cmd}#{v}`
+      end
+    end
+
+  end #class Main
+
+end #module Rain
+
+Rain::Main.new.go
+Rain::Servlet.go
+
+
+
+# Installation
+
+# Confirm Message
+#   - License too
+
+# download
+
+# decompress
+
+# run setup.rb
+
+# store InstalledFiles (where?)
+

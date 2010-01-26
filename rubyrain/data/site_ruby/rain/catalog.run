@@ -1,0 +1,25 @@
+#!/usr/bin/rain
+---
+Title      : Rain Catalog
+Description:
+  The Ruby Rain Catalog is the primary repository for
+  an assortment of Ruby packages.
+
+Maintainer : TransOnoma
+Email      : transmi@runbox.com
+Authors:
+  - TransOnoma
+
+File       : catalog.tgz
+Size       : 8     # KB
+Checksum   : ~     # md5 (or ~ if not known)
+Mirrors:
+  - [ http://rubyforge.org/frs/download.php/6245, US ]
+
+License: Ruby License
+
+Message:
+  Thanks for choosing Ruby Rain.
+
+Notes:
+  These are miscellaneous notes.

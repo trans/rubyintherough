@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'rain/rain'
+require 'rain/console'
+
+Rain::Console.new.go

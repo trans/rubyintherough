@@ -1,0 +1,81 @@
+
+<html>
+
+<head>
+
+<title>Ruby Rain</title>
+
+<style>
+
+         body { margin: 30px; font-family: sans-serif; background: white; }
+
+            a { color: blue }
+
+        input { font-size: 10pt; margin: 3px; }
+
+            p { font-size: 11pt; line-height: 16pt; color: black; font-weight: normal; }
+
+     div.drop { font-size: 10pt; margin-bottom: 15px; }
+   div.drop a { font-size: 9pt; }
+    span.desc { font-size: 10pt; line-height: 14pt; color: black; font-weight: normal; }
+       .title { font-size: 11pt; font-weight: bold; }
+
+      div#top { text-align: center; }
+
+     div#head { color: #FF0077; text-align: center; padding: 30px;
+                font-size: 56pt; font-weight: bold; }
+
+  div#subhead { color: #FF0077; text-align: center; padding: 30px;
+                font-size: 24pt; font-weight: bold; }
+
+     div#menu { font-size: 10pt; padding: 5px; }
+
+    div#drops { margin: 0 auto; width: 50%; text-align: justify;
+                border: 1px solid gray; padding: 20px; top:-20px; }
+
+   div#credit { text-align: center; margin: 0 auto; color: lightgray; font-size: 7pt; }
+
+ div#credit a { color: pink; font-size: 7pt; }
+
+</style>
+
+</head>
+
+<body>
+
+<form name="rainform" method="post">
+
+  <div id="top">
+
+    <div id="head">Ruby Rain</div>
+
+    <div id="menu">
+       <a href="http://localhost:9996/rain">Pretty Cover Page</a> &nbsp;&nbsp; <a href="http://">Global Watering Hole</a>
+    </div>
+
+    <input name="search" type="text" maxsize="50" size="50"/> <br/>
+
+    <input type="submit" value="Search Hole"/> <input type="submit" value="Search Drops"/>
+
+  </div>
+
+  <br/>
+
+  <div id="subhead">Local Rain Drops</div>
+
+  <div id="drops">
+
+    <?r drops?>
+
+  </div>
+
+</form>
+
+<br/>
+
+<div id="credit">
+  Ruby Rain Copyright (c) 2005 Thomas Sawyer, All Rights Reserved ;
+</div>
+
+</body>
+</html>

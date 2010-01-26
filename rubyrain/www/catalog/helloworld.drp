@@ -1,0 +1,26 @@
+#!/usr/bin/env rain
+---
+Title      : Hello World
+Version    : 1.0
+Description:
+  The traditional "Hello World" example program.
+
+Maintainer : Trans
+Email      : transfire@gmail.com
+Authors:
+  - Trans
+
+File       : helloworld.tgz
+Size       : 8  # KB
+Checksum   : 'b41f39edf50064fb9b4d21c5663f99fe' # md5
+Mirrors:
+  - http://rubyforge.org/frs/download.php/6228 [US]
+
+License:
+  This is an agreement.
+
+Message:
+  Thanks for choosing Ruby Rain.
+
+Notes:
+  These are miscellaneous notes.

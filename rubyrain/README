@@ -1,0 +1,17 @@
+= RAIN
+
+Rain was an idea to create a gem like package manager, but one that did not
+depend on a central repo of packages. Rather the central repo only contained
+"dropfiles" --YAML config files that specififed where to find the package, how
+to retrieve it and how to install it.
+
+The packages themselves could be gems, tar.gz files, or whatever and located
+on the Internet where ever the maintainer wished.
+
+The upside to this design is light-wieght central service, and flexability
+for developers to host there work where ever they prefer. The downside, is
+that older packages can often be lost --perhaps not so bad as it provides
+a natural means of "weeding" out outdated code.
+
+An interesting direction this could take, is P2P package distribution.
+
