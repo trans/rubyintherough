@@ -1,0 +1,70 @@
+= Protean
+
+  http://death.rubyforge.org
+
+
+== DESCRIPTION
+
+Prototype-based Object-Oriented programming with Ruby.
+
+
+== FEATURES/ISSUES
+
+* This is a highly expirmental library.
+* It is also a very small library.
+
+
+== RELEASE NOTES
+
+Please see RELEASE file.
+
+
+== SYNOPSIS
+
+Using Protean you can create objects simple by defining their
+attributes via instance variables. Functional attributes
+are defined using #fn.
+
+    require 'protean'
+
+    person = prototype do
+      @name = ''
+      @age = 0
+      @announce = fn { |x| "#{x}, #{name} is #{age}." }
+    end
+
+    person.name = 'Tom'
+    person.age = 35
+
+    person.announce['Peter']  #=> "Peter, Tom is 35."
+
+You can create prototype objects in this manner, then to get
+new objects use #new, which effectively clones the prototype.
+
+    another_person = person.new
+
+
+== HOW TO INSTALL
+
+To install with RubyGems simply open a console and type:
+
+  gem install protean
+
+Local installation requires Setup.rb (gem install setup),
+then download the tarball package and type:
+
+  tar -xvzf protean-1.0.0.tgz
+  cd protean-1.0.0
+  sudo setup.rb all
+
+Windows users use 'ruby setup.rb all'.
+
+
+== COPYING
+
+Copyright (c) 2006,2007 The Coding Dead
+
+This program is ditributed unser the terms of the LGPLv3 license.
+
+See LICENSE file for details.
+
