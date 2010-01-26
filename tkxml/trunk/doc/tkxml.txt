@@ -1,0 +1,555 @@
+# widgets
+
+<button>
+
+  <activatebackground>
+  <activeforeground>
+  <anchor>
+  <background>
+  <bitmap>
+  <borderwidth>
+  <cursor>
+  <disabledforeground>
+  <font>
+  <foreground>
+  <highlightbackground>
+  <highlightcolor>
+  <highlightthickness>
+  <image>
+  <justify>
+  <padx>
+  <pady>
+  <relief>
+  <repeatdelay>
+  <repeatinterval>
+  <state>
+  <takefocus>
+  <text>
+  <textvariable>
+  <underline>
+  <wraplength>
+
+  <command>
+  <compound>
+  <default>
+  <height>
+  <overrelief>
+  <width>
+
+</button>
+
+
+<canvas>
+
+  <background>
+  <borderwidth>
+  <cursor>
+  <highlightbackground>
+  <highlightcolor>
+  <highlightthickness>
+  <insertbackground>
+  <insertborderwidth>
+  <insertofftime>
+  <insertontime>
+  <insertwidth>
+  <relief>
+  <selectbackground>
+  <selectborderwidth>
+  <selectforeground>
+  <state>
+  <takefocus>
+  <xscrollcommand>
+  <yscrollcommand>
+
+  <closeenough>
+  <confine>
+  <height>
+  <scrollregion>
+  <width>
+  <xscrollincrement>
+  <yscrollincrement>
+
+</canvas>
+
+
+<checkbutton>
+
+  <activatebackground>
+  <activeforeground>
+  <anchor>
+  <background>
+  <bitmap>
+  <borderwidth>
+  <cursor>
+  <disabledforeground>
+  <font>
+  <foreground>
+  <highlightbackground>
+  <highlightcolor>
+  <highlightthickness>
+  <image>
+  <justify>
+  <padx>
+  <pady>
+  <relief>
+  <state>
+  <takefocus>
+  <text>
+  <textvariable>
+  <underline>
+  <wraplength>
+
+  <command>
+  <height>
+  <indicatoron>
+  <offvalue>
+  <onvalue>
+  <overrelief>
+  <selectcolor>
+  <selectimage>
+  <variable>
+  <width>
+
+</checkbutton>
+
+
+<entry>
+
+  <background>
+  <borderwidth>
+  <cursor>
+  <exportselection>
+  <font>
+  <foreground>
+  <highlightbackground>
+  <highlightcolor>
+  <highlightthickness>
+  <insertbackground>
+  <insertborderwidth>
+  <insertofftime>
+  <insertontime>
+  <insertwidth>
+  <justify>
+  <relief>
+  <selectbackground>
+  <selectborderwidth>
+  <selectforeground>
+  <state>
+  <takefocus>
+  <textvariable>
+  <xscrollcommand>
+
+  <disabledbackground>
+  <disabledforeground>
+  <invalidcommand>
+  <invcmd>
+  <readonlybackground>
+  <show>
+  <validate>
+  <validatecommand>
+  <vcmd>
+  <width>
+
+</entry>
+
+
+<frame>
+
+  <borderwidth>
+  <cursor>
+  <highlighbackground>
+  <highlightcolor>
+  <highlightthickness>
+  <padx>
+  <pady>
+  <relief>
+  <takefocus>
+
+  <background>
+  <class>
+  <colormap>
+  <container>
+  <height>
+  <visual>
+  <width>
+
+</frame>
+
+
+<label>
+
+  <activebackground>
+  <activeforeground>
+  <anchor>
+  <background 
+  <bitmap>
+  <borderwidth>
+  <cursor>
+  <disabledforeground>
+  <font>
+  <foreground>
+  <highlightbackground>
+  <highlightcolor>
+  <highlightthickness>
+  <image>
+  <justify>
+  <padx>
+  <pady>
+  <relief>
+  <takefocus>
+  <text>
+  <textvariable>
+  <underline>
+  <wraplength>
+
+  <height>
+  <state>
+  <width>
+
+</label>
+
+
+<labelframe>
+
+  <borderwidth>
+  <cursor>
+  <font>
+  <foreground>
+  <highlightbackground>
+  <highlightcolor>
+  <highlightthickness>
+  <padx>
+  <pady>
+  <relief>
+  <takefocus>
+  <text>
+
+  <background>
+  <class>
+  <colormap>
+  <container>
+  <height>
+  <labelanchor>
+  <labelwidget>
+  <visual>
+  <width>
+
+</labelframe>
+
+
+<listbox>
+
+  background
+  borderwidth
+  cursor
+  disabledforeground
+  exportselection
+  font
+  foreground
+  height
+  highlightbackground
+  highlightcolor
+  highlightthickness
+  relief
+  selectbackground
+  selectborderwidth
+  selectforeground
+  setgrid
+  state
+  takefocus
+  width
+  xscrollcommand
+  yscrollcommand 
+
+  height
+  listvariable
+  selectmode
+  state
+  width
+
+</listbox>
+
+
+<menu>
+  <activebackground>
+  <activeborderwidth>
+  <activeforeground>
+  <background>
+  <borderwidth>
+  <cursor>
+  <disabledforeground>
+  <font>
+  <foreground>
+  <relief>
+  <takefocus>
+  <postcommand>
+  <selectcolor>
+  <tearoff>
+  <tearoffcommand>
+  <title>
+  <type>
+</menu>
+
+
+<menubutton>
+-activebackground
+-activeforeground
+-anchor
+-background
+-bitmap
+-borderwidth
+-cursor
+-disabledforeground
+-font
+-foreground
+-highlightbackground
+-highlightcolor
+-highlightthickness
+-image
+-justify
+-padx 
+-pady
+-relief
+-takefocus
+-text 
+-textvariable
+-underline 
+-wraplength 
+-compound
+-direction
+-height
+-indicatoron
+-menu
+-state
+-width
+</menubutton>
+
+
+<message>
+  <anchor>
+  <background>
+  <borderwidth>
+  <cursor>
+  <font>
+  <foreground>
+  <highlightbackground>
+  <highlightcolor>
+  <highlightthickness>
+  <padx>
+  <pady>
+  <relief>
+  <takefocus>
+  <text>
+  <textvariable>
+  <width>
+  <aspect>
+  <justify>
+</message>
+
+
+<tk_optionMenu>
+  <name>
+  <variablename>
+  <value>
+</tk_optionMenu>
+
+
+<panedwindow>
+  <background>
+  <borderwidth>
+  <cursor>
+  <height> 
+  <orient>
+  <relief>
+  <width> 
+  <handlepad>
+  <handlesize>
+  <opaqueresize>
+  <sashcursor>
+  <sashpad>
+  <sashrelief>
+  <sashwidth>
+  <showhandle>
+</panedwindow>
+
+
+<radiobutton>
+  activebackground
+  activeforeground
+  anchor
+  background
+  bitmap
+  borderwidth
+  cursor
+  disabledforeground
+  font
+  foreground
+  highlightbackground
+  highlightcolor
+  highlightthickness
+  image
+  justify
+  padx
+  pady
+  relief
+  takefocus
+  text
+  textvariable
+  underline
+  wraplength
+  command
+  height
+  indicatoron
+  selectcolor
+  overrelief
+  selectimage
+  state
+  value
+  variable
+  width
+</radiobutton>
+
+
+<scale>
+  activebackground
+  background
+  borderwidth
+  cursor
+  font
+  foreground
+  highlightbackground
+  highlightcolor
+  highlightthickness
+  orient
+  relief
+  repeatdelay 
+  repeatinterval
+  takefocus
+  troughcolor
+  bigincrement
+  command
+  digits
+  from
+  label
+  length
+  resolution
+  showvalue
+  sliderlength
+  sliderrelief
+  state
+  tickinterval
+  to
+  variable
+  width
+</scale>
+
+
+
+<scrollbar>
+  activebackground
+  background
+  borderwidth
+  cursor
+  highlightbackground
+  highlightcolor
+  highlightthickness
+  jump 
+  orient
+  relief
+  repeatdelay
+  repeatinterval 
+  takefocus
+  troughcolor 
+  activerelief
+  command
+  elementborderwidth
+  width
+</scrollbar>
+
+
+<spinbox>
+  activebackground
+  background
+  borderwidth
+  cursor
+  exportselection
+  font
+  foreground
+  highlightbackground
+  highlightcolor
+  highlightthickness
+  insertbackground
+  insertborderwidth
+  insertofftime
+  insertontime
+  insertwidth
+  justify 
+  relief
+  repeatdelay
+  repeatinterval
+  selectbackground
+  selectborderwidth
+  selectforeground
+  takefocus
+  textvariable
+  xscrollcommand 
+  buttonbackground
+  buttoncursor
+  buttondownrelief
+  buttonuprelief
+  command
+  disabledbackground
+  disabledforeground
+  format
+  from
+  invalidcommand
+  invcmd
+  increment
+  readonlybackground
+  state
+  to
+  validate
+  validatecommand
+  vcmd
+  values
+  width
+  wrap
+</spinbox>
+
+
+<text>
+  background
+  borderwidth
+  cursor
+  exportselection
+  font
+  foreground
+  highlightbackground
+  highlightcolor
+  highlightthickness
+  insertbackground
+  insertborderwidth
+  insertofftime
+  insertontime
+  insertwidth
+  padx
+  pady
+  relief
+  selectbackground
+  selectborderwidth
+  selectforeground
+  setgrid
+  takefocus
+  xscrollcommand
+  yscrollcommand 
+  autoseparators
+  height
+  spacing1
+  spacing2
+  spacing3
+  state
+  tabs
+  undo
+  width
+  wrap
+</text>
