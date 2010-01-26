@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <title>Facets Wiki</title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <link rel="shortcut icon" href="img/ruby-lg.png"/>
+</head>
+
+<body>
+<div class="container">
+  <div class="logo">
+    <img src="img/ruby-lg.png" align="left">
+  </div>
+
+  <div class="header">
+    <div class="title">
+      Facets API Wiki
+    </div>
+    <div class="topmenu">
+      <a href="<%= LINK % HOME %>">Wikisite</a> &middot;
+      <a href="http://facets.rubyforge.org">Website</a> &middot;
+      <a href="http://rubyforge.org/projects/facets">Devsite</a>
+    </div>
+    <h2><%= page_name %></h2>
+    <h3><%= report %></h3>
+  </div>
+
+  <table class="content" style="clear: both;">
+  <tr><td>
+
+    <div class="sidebar" style="float: left;">
+      <h2 class="pages_title">Pages</h2>
+      <% page_list.each do |file| %>
+        <a href="?name=<%= file %>"><%= file %></a> <br/>
+      <% end %>
+    </div>
+
+  </td><td width="99%">
+
+    <% if edit? %>
+      <a href="?name=<%= page_name %>">View</a> &middot;
+      <a href="?pages/<%= page_name %>">Raw</a>
+
+      <form method="POST" action="?name=<%= page_name %>">
+        <input type="hidden" name="name" value="<%= page_name %>"/>
+        <textarea class="text" name="changes"><%= content %></textarea> <br/>
+        Passcode: <input type="text" name="passcode" size="4" value="" />
+        <input type="submit" value="Save">
+      </form>
+
+    <% else %>
+      <a href="?name=<%= page_name %>&edit=true">Edit</a> &middot;
+      <a href="?pages/<%= page_name %>">Raw</a>
+
+      <div class="text"><%= parsed_content %></div>
+     <% end %>
+
+  </td></tr>
+  </table>
+
+  <br style="clear: both;"/>
+
+  <% if debug? %>
+    <h2>Debug</h2>
+    <pre><%= debug_output %></pre>
+  <% end %>
+
+</div>
+</body>
+
+</html>

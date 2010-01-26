@@ -1,0 +1,74 @@
+author. Thomas Sawyer
+
+class. Module
+
+def. attr_validator(*symbols, &validator)
+
+Like attr_writer, but the writer method validates the
+setting against the given block.
+
+def. attr_setter(*args)
+
+Create an attribute method for both getting
+and setting an instance variable.
+
+  attr_setter :a
+
+_is equivalent to_
+
+  def a(*args)
+    if args.size > 0
+      @a = args[0]
+      self
+    else
+      @a
+    end
+  end
+
+def. attr_tester(*args)
+
+Create an tester attribute. This creates two methods for
+each given variable name. One is used to test
+the attribute and the other is used to set or toggle it.
+
+  attr_tester :a
+
+is equivalent to
+
+  def a?
+    @a ? true : @a
+  end
+
+  def a!(switch=Exception)
+    if switch == Exception
+      @a = !@a
+    else
+      @a = switch ? true : @a
+      self
+    end
+  end
+
+def. attr_toggler(*args)
+
+Create a toggle attribute. This creates two methods for
+each given name. One is a form of tester and the other
+is used to toggle the value. or set the possible toggle
+values.
+
+  tr_toggler :a
+
+is equivalent to
+
+  def a?
+    @a ||= [false,true]
+    @a.first
+  end
+
+  def a!(*values)
+    if values.empty?
+      @a << @#{a}.shift
+    else
+      @#{a} = values
+    end
+    self
+  end
