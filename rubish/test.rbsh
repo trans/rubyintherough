@@ -1,0 +1,9 @@
+
+echo rubish.rb
+
+cp rubish.rb ~/Files/
+
+10.times do |x|
+  puts x
+end
+
