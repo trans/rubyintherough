@@ -1,0 +1,63 @@
+= Overload
+
+* http://death.rubyforge.org
+* http://death.rubyforge.org/overload
+
+
+== DESCRIPTION
+
+Overload methods using type specific signitures.
+
+
+== RELEASE NOTES
+
+Please see RELEASE file.
+
+
+== SYNOPSIS
+
+To overload a method use the #overload meathod
+to define a new functionality based on a
+specified type interface.
+
+   class X
+     def x
+       "hello"
+     end
+
+     overload :x, Integer do |i|
+       i
+     end
+
+     overload :x, String, String do |s1, s2|
+       [s1, s2]
+     end
+   end
+
+
+== HOW TO INSTALL
+
+Describe your installation procedure here.
+
+To install with RubyGems simply open a console and type:
+
+  gem install overload
+
+Local installation requires Setup.rb (gem install setup),
+then download the tarball package and type:
+
+  tar -xvzf overload-1.0.0.tgz
+  cd overload-1.0.0
+  sudo setup.rb all
+
+Windows users use 'ruby setup.rb all'.
+
+
+== COPYING
+
+Copyright (c) 2005,2009 The Coding Dead
+
+This program is ditributed unser the terms of the LGPLv3 license.
+
+See LICENSE file for details.
+
