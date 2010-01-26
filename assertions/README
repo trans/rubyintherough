@@ -1,0 +1,41 @@
+= Assertions
+
+* http://.rubyforge.org
+
+
+== DESCRIPTION
+
+The Assetions project defines Assertions in the same way that Ruby
+defines Exceptions. An asserition then simple becomes an extension
+to an Exception class. For assertions required that no exception
+currently exists, and new exception is created.
+
+
+== FEATURES/ISSUES
+
+* Mirrors the Ruby Exception system.
+
+
+== SYNOPSIS
+
+TODO!
+
+
+== HOW TO INSTALL
+
+To install with RubyGems simply open a console and type:
+
+  gem install assertions
+
+Site installation with the tarball can be done with Ruby Setup
+(gem install setup). See http://proutils.github.com/setup.
+
+
+== LICENSE
+
+Copyright (c) 2009 Thomas Sawyer
+
+This program is ditributed unser the terms of the Ruby license.
+
+See LICENSE file for details.
+

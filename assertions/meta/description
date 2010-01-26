@@ -1,0 +1,4 @@
+The Assetions project defines Assertions in the same way that Ruby
+defines Exceptions. An asserition then simple becomes an extension
+to an Exception class. For assertions required that no exception
+currently exists, and new exception is created.
