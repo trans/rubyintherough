@@ -1,0 +1,8 @@
+= One
+
+One is a library to help make one-liners even more terse.
+It provides one to two letter aliases for a number of
+classes, modules and methods, helping one to create very
+tight one-liners. While a bit of a gag library, it could
+be used for code obsfuscation too. It also includes a
+collection of some notable Ruby one-liners.

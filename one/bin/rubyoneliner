@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+require 'one/oneliner'
+
+name = ARGV.last
+
+case ARGV.first
+when "--list"
+  puts OneLiners.list.join("\n")
+when "--view"
+  if OneLiners.include?(name)
+    puts OneLiners.code(name)
+  else
+    puts "Unknown oneliner -- #{name}"
+    exit 0
+  end
+else
+  if OneLiners.include?(name)
+    OneLiners.exec(name)
+  else
+    puts "Unknown oneliner -- #{name}"
+    exit 0
+  end
+end
