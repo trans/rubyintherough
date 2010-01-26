@@ -1,0 +1,3 @@
+Build any kind hierachical structure programatically
+via Ruby blocks. Buildable provides a backbone for
+easily creating hierachical DSLs.

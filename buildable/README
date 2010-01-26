@@ -1,0 +1,81 @@
+= Buildable
+
+* http://death.rubyforge.org
+* http://death.rubyforge.org/buildable
+
+
+== DESCRIPTION
+
+Build any kind hierachical structure programatically
+via Ruby blocks. Buildable provides a backbone for
+easily creating hierachical DSLs.
+
+
+== FEATURES/ISSUES
+
+* Define a special #build method and include. That's it.
+* This is betaware. Code and docs need improvements.
+
+
+== RELEASE NOTES
+
+Please see RELEASE file.
+
+
+== SYNOPSIS
+
+Example of a very simplistic XML builder.
+
+  class XMLBuilder
+
+    include Buildable
+
+    def build(tag, attrs={}, &body)
+      attrs = attrs.map{ |k,v| %[#{k}="#{v}"] }
+      "<#{tag} #{attrs.join(' ')}>#{body.call}</#{tag}>"
+    end
+
+  end
+
+  doc = XMLBuilder.build do
+
+    head do
+      title { "Test" }
+    end
+
+    body do
+      i { "Hello" }
+      br
+      p { "Test" }
+      p { "Hey"  }
+    end
+
+  end
+
+
+== HOW TO INSTALL
+
+Describe your installation procedure here.
+
+To install with RubyGems simply open a console and type:
+
+  gem install buildable
+
+Local installation requires Setup.rb (gem install setup),
+then download the tarball package and type:
+
+  tar -xvzf buildable-1.0.0.tgz
+  cd buildable-1.0.0
+  sudo setup.rb all
+
+Windows users use 'ruby setup.rb all'.
+
+
+== COPYING
+
+Copyright (c) 2006 Coding Dead <http://death.rubyforge.org>
+
+This program is ditributed under the terms of the LGPL v3 license.
+
+See LICENSE file for details.
+
