@@ -1,0 +1,54 @@
+= Read/Write Delegator
+
+  http://death.rubyforge.org
+
+
+== DESCRIPTION
+
+Delegate reads and writes to separate delegates.
+This is a very expiremental library.
+
+
+== FEATURES/ISSUES
+
+* Analyzies state change to determine if write took place.
+* Highly experimental code.
+* Future versions will test alternate approaches.
+
+
+== RELEASE NOTES
+
+Please see RELEASE file.
+
+
+== SYNOPSIS
+
+  require 'rwdelegator'
+
+  ... to be done ...
+
+
+== HOW TO INSTALL
+
+To install with RubyGems simply open a console and type:
+
+  gem install rwdelegator
+
+Local installation requires Setup.rb (gem install setup),
+then download the tarball package and type:
+
+  tar -xvzf rwdelegator-1.0.0.tar.gz
+  cd rwdelegator-1.0.0
+  sudo setup.rb all
+
+Windows users use 'ruby setup.rb all'.
+
+
+== COPYING
+
+Copyright (c) 2005 The Coding Dead
+
+This program is ditributed unser the terms of the LGPLv3 license.
+
+See LICENSE file for details.
+
