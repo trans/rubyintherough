@@ -1,0 +1,20 @@
+#!mast lib meta test [A-Z]*
+lib/advisable.rb
+meta/authors
+meta/created
+meta/description
+meta/homepage
+meta/license
+meta/name
+meta/released
+meta/repository
+meta/requires
+meta/sitemap
+meta/suite
+meta/summary
+meta/version
+test/test_advisable.rb
+RELEASE
+README
+HISTORY
+Syckfile

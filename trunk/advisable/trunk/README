@@ -1,0 +1,44 @@
+= Advisable
+
+
+== DESCRIPTION
+
+Add before, after and around advice in dynamic fashion.
+This is an expirmental foray into a generic AOP mixin.
+
+
+== FEATURES/ISSUES
+
+* Extends Method class and makes them 1st class objects.
+
+
+== SYNOPSIS
+
+  ... to be done ...
+
+
+== REQUIREMENTS
+
+* Ruby Facets
+
+
+== HOW TO INSTALL
+
+Describe your installation procedure here.
+
+To install with RubyGems simply open a console and type:
+
+  gem install advisable
+
+Old-school site installation requires Ruby Setup (gem install setup).
+See http://proutils.github.com/setup for information.
+
+
+== COPYRIGHT/LICENSE
+
+Copyright (c) 2007 Thomas Sawyer
+
+This program is ditributed unser the terms of the MIT license.
+
+See LICENSE file for details.
+
