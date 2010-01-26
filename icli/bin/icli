@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'icli/app.rb'
+
+ICli::Command.start
+

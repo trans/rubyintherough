@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet href="layout.xsl" type="text/xsl" ?>
+
+<content>
+
+<p style="color: red"> IMPORTANT iCli is still in early stages of development. Becuase of this
+the following documentation might not refect the actualy state of functionailty.</p>
+
+<img style="padding: 0 10px; float: left;" src="img/spider.jpg" />
+
+<h1>The <code>icli</code> Command</h1>
+
+<p>The <code>icli</code> command is a simple tool that allows you to interact with web services
+via the command-line rather than the normal point-and-click web interface.</p>
+
+<p>A good example of how this useful is the convenience it brings to making a package release
+or posting a news item to a GForge based site.</p>
+
+<p>Currently <code>icli</code> supports RubyForge.org and it's most common functions --the one's most
+useful to a project developer. More sites and features will be added in the future
+based on demand.</p>
+
+<p>NOTE: Full general purpose use is still under development.</p>
+
+
+<h2>Usage Example, Rubyforge.org</h2>
+
+<p>@icli@ works off of two sources of input. The obvious one is the command line, where you
+can specify parameters along with with command you want performed. The other is a
+configuration file in the working directory. This is useful for setting parameters
+that will remain unchanged though different commands. The configuration file
+can be named either '.icli.yaml' or 'meta/icli.yaml', relative to the working
+directory. It is a YAML formatted file where each map entry is either a global option,
+or a host with each sub-map entry a command and each sub-sub-map entry a command parameter.
+Here's an example of iCli's own file.</p>
+
+<pre>
+  rubyforge:
+    project  : proutils
+    username : xxxxxxxx
+
+    release:
+      store     : pkg
+      package   : icli
+      notelog   : doc/log/Notelog.txt
+      changelog : doc/log/Changelog.txt
+
+    post:
+      message: doc/post.txt
+
+    publish:
+      source    : doc/
+</pre>
+
+<p>Command-line entries always override entries in the config file.</p>
+
+<h3>Touch Base</h3>
+
+<p>To make sure a connection works, you can send the @touch@ command. This is
+a common command for all hosts.</p>
+
+<pre>
+    $ icli rubyforge touch
+</pre>
+
+<h3>Package Release</h3>
+
+<p>To release a new package you need to specify a number of parameters. Notice we specified
+most of them in our configuration file. We had only the version left, which we give on
+the command line because it changes from release to release.</p>
+
+<pre>
+    $ icli rubyforge release --version=1.0.0
+</pre>
+
+<p>Note that we could also specify multiple @file@ parameters to specifically tell the
+command which files to release. As given the command makes the assumption that the
+files you want release match the pattern "pkg/icli-1.0.0.*", ie. "#{store}/#{package}-#{version}.*"</p>
+
+<h3>Submit News Item</h3>
+
+<p>This isn't working yet!</p>
+
+<pre>
+   $ icli rubyforge post
+</pre>
+
+<h3>Publish Website</h3>
+
+<p>This isn't working yet!</p>
+
+<pre>
+    $ icli rubyforge publish
+</pre>
+
+<h2>How <code>icli</code> Works</h2>
+
+<p><code>icli</code> uses a support library called "HTTPClient":http:// by ... This library allows
+a Ruby program to interact with a website just as if a person were actually navigating it.
+It simulates field entries and submit button presses and can extract information
+from any addressable website. Adding support for a RubyForge function, for instance,
+is simply a matter of understanding the sequence of pages used by RubyForge for
+a particular task.</p>
+
+</content>

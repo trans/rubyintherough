@@ -1,0 +1,16 @@
+---
+rubyforge:
+  project  : ratchets
+  username : transami
+
+  release:
+    store     : pkg
+    package   : Ratchets
+    notelog   : log/note.txt
+    changelog : log/release.txt
+
+  publish: {}
+
+  post:
+    file: log/release.txt
+
