@@ -1,0 +1,53 @@
+= CloseCall
+
+* http://.rubyforge.org
+* http://.rubyforge.org/closecall
+
+
+== DESCRIPTION
+
+CloseCall is a mixin that allows programs to make slight spelling 
+and/or arity mistakes on method calls and the program will still work.
+
+
+== RELEASE NOTES
+
+Please see RELEASE file.
+
+
+== SYNOPSIS
+
+  class X
+    include CloseCall
+    def demonstrate
+      "DEMONSTATED!"
+    end
+  end
+
+  X.new.demnstrate  #=> DEMONSTRATED!
+
+
+== HOW TO INSTALL
+
+To install with RubyGems simply open a console and type:
+
+  gem install closecall
+
+Local installation requires Setup.rb (gem install setup),
+then download the tarball package and type:
+
+  tar -xvzf closecall-1.0.0.tgz
+  cd closecall-1.0.0.tgz
+  sudo setup.rb all
+
+Windows users use 'ruby setup.rb all'.
+
+
+== LICENSE
+
+Copyright (c) 2009 Derek Lewis <lewisd#f00f.net>
+
+This program is ditributed unser the terms of the LGPL v3 license.
+
+See LICENSE file for details.
+

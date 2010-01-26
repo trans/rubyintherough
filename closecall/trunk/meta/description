@@ -1,0 +1,2 @@
+CloseCall is a mixin that allows programs to make slight spelling 
+and/or arity mistakes on method calls and the program will still work.
