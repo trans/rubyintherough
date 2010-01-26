@@ -1,0 +1,3 @@
+OpensStructable is a mixin module which can add OpenStruct
+behavior to any class, allowing objects to have arbitrary
+attributes. It is fully API compatible with OpenStruct.

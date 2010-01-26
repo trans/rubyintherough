@@ -1,0 +1,75 @@
+= OpenStructable
+
+* http://death.rubyforge.org
+* http://death.rubyforge.org/ostructable
+
+
+== DESCRIPTION
+
+OpenStructable is a mixin module which can provide OpenStruct
+behavior to any class, allowing objects to easily store 
+arbitrary attributes.
+
+With OpenStructable it is possible to implement a Ruby compatable
+OpenStruct class simply by coding:
+
+  class OpenStruct
+    include OpenStructable
+  end
+
+
+== FEATURES/ISSUES
+
+* Dynamically constructed based on Enumerable.
+* Methods #inject and #zip do not take parameters.
+* Methods #find and #detect have a modified interface.
+
+
+== RELEASE NOTES
+
+Please see RELEASE file.
+
+
+== SYNOPSIS
+
+Simpl include OpenStructable into your class.
+
+   require 'ostructable'
+
+   class Record
+     include OpenStructable
+   end
+
+   record = Record.new
+   record.name    = "John Smith"
+   record.age     = 70
+   record.pension = 300
+
+   puts record.name     # -> "John Smith"
+   puts record.address  # -> nil
+
+
+== HOW TO INSTALL
+
+To install with RubyGems simply open a console and type:
+
+  gem install ostructable
+
+Local installation requires Setup.rb (gem install setup),
+then download the tarball package and type:
+
+  tar -xvzf ostructable-1.0.0.tgz
+  cd ostructable-1.0.0
+  sudo setup.rb all
+
+Windows users use 'ruby setup.rb all'.
+
+
+== COPYING
+
+Copyright (c) 2005,2009 The Coding Dead <death.rubyforge.org>
+
+This program is ditributed under the terms of the LGPLv3 license.
+
+See LICENSE file for details.
+
