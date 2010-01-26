@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'wik'
+
+wik = Wik.new(File.new(ARGV[0]))
+puts wik.to_html
+

@@ -1,0 +1,15 @@
+name        : wik
+version     : 1.0.0
+status      : STABLE
+license     : GPLv3
+author      : FIX
+
+title       : Wik
+summary     : FIX
+
+homepage    : http://wik.rubyforge.org
+repository  : http://wik.rubyforge.org/svn
+
+created     : Wed Aug 20 17:26:43 -0400 2008
+
+

@@ -1,0 +1,49 @@
+= Wik
+
+  http://wik.rubyforge.org
+
+== INTRODUCTION
+
+Wik is a ... FIX
+
+
+== RELEASE NOTES
+
+Please see NOTICE file.
+
+
+== RECENT CHANGES
+
+Please see CHANGES file.
+
+
+== HOW TO INSTALL
+
+Describe your installation procedure here.
+
+To install with RubyGems simply open a console and type:
+
+  gem install wik
+
+To manually installation, download the tgz package and type:
+
+  tar -xvzf wik-x.y.z.tgz
+  cd wik-x.y.z.tgz
+  rake config
+  rake setup
+  rake install
+
+
+== USAGE
+
+Describe how to use your library or application here... FIX
+
+
+== LICENSE
+
+Copyright (c) 2008 FIX
+
+This program is ditributed unser the terms of the GPLv3 license.
+
+See LICENSE file for details.
+

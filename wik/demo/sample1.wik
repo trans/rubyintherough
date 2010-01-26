@@ -1,0 +1,65 @@
+
+Welcome                                                         | h1
+=======                                                         | !
+
+This is a simple example of Wik markup up. Wik markup
+is short and sweet. Never complex, or hard to read.
+
+Wik supports some basic inline markup features, like
+*strong* and _underscore_ and /emphisis/ and :texttype:.
+
+Maybe you need to put a box around a paragraph?                 | {border: 1px solid #000;}
+
+Jeez, do we really want all the text to the right?              | p #jeez .really
+Well now really, so we use type, id and class. Then 
+stick our stylesheet at the bottom of the document
+where no one really cares about it. Have a look.
+
+Obvious having to line up the right side of your document
+all the time can be a pain. Don't worry. The trick
+is to put at least three space between your content
+and the :|: line. The let the :wik: command line fix
+her all up for you. No problemo.
+
+Okay, there are a few other features we need to fill
+you on. Wik still supports your usual wikiwiki layout
+stuff. Such as preformat sections indicated by indents.
+
+  This is preformated text.                                     | pre
+  It will look just like
+  Y O U   W R O T E   I T !
+
+The there are the good old bullet lists:
+
+* here                                                          | ul/ .gold {color: red} li/
+  * here                                                        | li
+  * here                                                        | li
+    * here                                                      | li
+    * here                                                      | li /li
+* here                                                          | li
+  * here                                                        | li
+  * here                                                        | li /ul
+
+And good old numerated lists.
+
+1. here
+    1. here
+       1.  here
+       2. here
+    2. here
+2. here
+    1. here
+    2. here
+
+
+
+--- !text/css
+
+#jeez {
+  color: purple;
+}
+
+.really {
+  font-style: italic;
+}
+
