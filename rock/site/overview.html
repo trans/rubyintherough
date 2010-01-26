@@ -1,0 +1,311 @@
+<html>
+<head>
+  <title>Rock Your Ruby</title>
+  <LINK REL="SHORTCUT ICON" HREF="img/ruby.gif"/>
+  <style>
+             body { font-family: sans-serif; margin: 20px; color: #222222; background: #444444;
+                    font-size: 11pt; font-family: sans-serif; }
+               hr { margin: 0 auto; width: 710px; }
+               li { font-size: 1em; }
+                p { font-size: 1em; line-height: 1.2em; }
+               h1 { margin-top: 50px; }
+               h2 { margin-top: 40px; }
+             code { color: red; font-size: 0.9em; font-family: monospace; }
+              pre { color: red; font-size: 0.8em; font-family: monospace; letter-spacing: 1px; }
+        div#title { margin: 0 auto; width: 720px; text-align: left; background: white; 
+                    height: 220px; border: 1px solid black; padding: 20px 30px 0px 50px; }
+    div#container { margin: 0 auto; width: 700px; text-align: justify; background: white; font-family: sans-serif;
+                    padding: 1px 40px 40px 40px; border-left: 1px solid gray; border-right: 1px solid gray; }
+       span#title { color: red; font-family: monospace; font-size: 72pt; letter-spacing: 10pt; font-weight: bold; }
+    span#subtitle { color: black; font-size: 10pt; padding-left: 35px; font-weight: bold; }
+         span#rev { background: red; color: white; }
+    div#footnotes { margin: 0 auto; width: 700px; font-size: 0.8em; }
+         div#copy { margin: 0 auto; width: 700px; font-size: 0.8em; margin-top: 30px; color: white; }
+         span.red { color: red; }
+       span.small { font-size: 10pt; }
+       span.note  { font-size: 1em; font-style: italic; }
+  </style>
+</head>
+<body>
+
+<div id="title" style="">
+  <img src="img/pyramid.jpg" width="290px" height="200px" align="right" style="margin-right: 20px;">
+  <br/>
+  <span id="title">ROCK</span></br>
+  <span id="subtitle">ruby | open archival</span></br>
+</div>
+
+<div id="container">
+
+  <h1> Table of Contents </h1>
+
+  <ol>
+   <li> <a href="#ch_info">Introduction</a>
+    <ol>
+      <li><a href="#ch_about">   What is Rock? </a></li>
+      <li><a href="#ch_feature"> Feature Highlights        </a></li>
+      <li><a href="#ch_install"> How to Install            </a></li>
+      <li><a href="#ch_who">     Who Developed This?       </a></li>
+    </ol>
+   </li>
+   <li> <a href="#ch_user">Rock in General Use</a>
+    <ol>
+      <li><a href="#ch_quick">   Quick Rockout             </a></li>
+      <li><a href="#ch_format">  Rock Archival Format      </a></li>
+    </ol>
+   </li>
+   <li> <a href="#ch_dev">Rock for Ruby Developers</a>
+    <ol>
+      <!-- <li><a href="#ch_libver">   Library Versioning     </a></li> -->
+      <li><a href="#ch_roll">    Rock'n'Roll              </a></li>
+      <li><a href="#ch_reap">    Reap and Sow Rock Too    </a></li>
+      <li><a href="#ch_run">     Live Development         </a></li>
+    </ol>
+   </li>
+   <li> <a href="#ch_choose">Rock With You</a>
+    <ol>
+      <li><a href="#ch_maint">   Benefits to Package Maintainers  </a></li>
+      <li><a href="#ch_gems">    Rocking Gems World               </a></li>
+      <li><a href="#ch_concl">   Are You Ready to Rock?           </a></li>
+    </ol>
+   </li>
+  </ol>
+
+<br/>
+
+<b>IMPORTANT NOTICE</b>
+THIS IS STILL VERY MUCH A WORK IN PROGRESS AND THUS DOES NOT NECESSARILY MATCH WITH THE CURRENT STATE OF DEVELOPMENT.
+
+
+<h1 id="ch_info"> Introduction </h1>
+
+
+<h2 id="ch_about"> What is Rock? </h2>
+
+<p><span class="red">Rock</span> is a packaging format for Ruby. IN some respects Rock files
+are like Java's .jar files. Using Rolls they can be required directory<sup>1</sup>. But they are
+alos like .gem files in that they are used to distribute and install software packages. Finally, they
+are also like .msi files on Windows, or self-extracting .zip files, in that they are self executable.</p>
+
+<p>The extension of a rock file is <code>.rbr</code>.</p>
+
+
+<h2 id="ch_feature"> Feature Highlights </h2>
+
+  <ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li>Rock files are secure with redundant content verfication.</li>
+  <li>Rock files can be required directly by Ruby using Roll.</li>
+  </ul>
+
+
+<h2 id="ch_install">How to Install</h2>
+
+<p>Rock requires <b>Ruby</b> 1.8 or higher.</p>
+
+<p>Installation is straight-forward. Download the package file,
+decompress it, 'cd' into the uncompressed directory and run
+<code>setup.rb</code>.</p>
+
+<pre>
+  % wget http://rubyforge.org/frs/download.php/11057/rock-0.2.0.tar.gz
+  % tar -xvvjf rock-0.2.0
+  % cd rock-0.2.0
+  % sudo ruby setup.rb
+</pre>
+
+<p>When that's done you're ready to rock.</p>
+
+
+<h2 id="ch_who"> Who Developed This? </h2>
+
+<p>Rock was written by Trans (aka Thomas Sawyer).</p>
+
+
+<!-- USING -->
+
+<h1 id="ch_user"> Rock in General Use </h1>
+
+<h2 id="ch_quick"> Quick Rockout </h2>
+
+<p>Using a rock is increadibly easy. If you've ever used a compression tool
+before, like tar, then you  already have a good idea how to use rock.</p>
+
+<p>Let try it on the demo  provided with the rock distribution.
+In a shell console navigate to rock's demo folder. You'll find it in the
+rock source package you decompressed for when installing.
+Have have a look at its contents.</p>
+
+<pre>
+    % cd rock-0.6
+    % cd demo
+    % ls
+    demo_rock
+</pre>
+
+<p>The <code>demo_rock</code> folder it just a silly example of a ruby project.
+Take a look inside the folder and you'll see a typical project layout, albiet
+with a couple odd files in it.</p>
+
+<pre>
+    lib/
+      demp_rock/
+        tryme.rb
+    meta/
+      project
+    doc/
+      web/
+        index.html
+        rocklobster.jpg
+    README
+</pre>
+
+Now lets compress it with rock.</p>
+
+<pre>
+    % rock --create demo_rock/
+</pre>
+
+<p>Rock reads in the folder contents and creates a new package called,
+<code>demo_rock.rbr</code>.</p>
+
+<pre>
+    % ls
+    demo_rock  demo_rock.rbr
+</pre>
+
+<p>You can extract Rock archive just as easy.
+
+<pre>
+    % rock --extract demo_rock
+</pre>
+
+
+
+
+
+<h2 id="ch_format"> Rock Archival Format </h2>
+
+<p>If you have an archive browser application, you can use it to
+look at the rock file. Rock uses tar for it's container format, and
+presently only supports gzip for compression, so any standard archive
+manager can peal back the first layer. (You may need to teach your 
+system to treat a .rock file like it were a .tar.gz though).</p>
+
+<p>Inside you will notice the first layer of contents match the
+first layer of contents inside the demo_rock folder itself.</p>
+
+<pre>
+    lib.rock
+    meta.rock
+    web.rock
+    Lorem_ipsum.txt.gz
+</pre>
+
+<p>If you drill down furhter into a "subcompression" you will see
+that the same pattern follows all the way through the archive.
+--hence a </i>recursive</i> archive.</p>
+
+<p><i>NOTE: Additional features related to the selectively adding
+files to an archive and cherry picking files out of an archive
+are planned, but implementation isn't complete yet.</i></p>
+
+
+<h1 id="ch_dev"> Rock for Ruby Developers </h1>
+
+<h2 id="ch_layout"> Rock'n'Roll </h2>
+
+<p><i>NOTE: Roll does not yet support this feature!</i></p>
+
+<p>To use a Rock archive like Java uses Jar files, the first thing
+you need is <a href="http:roll.rubyforge.org.">Roll</a>. Roll
+is a library management system that brings version management to
+Ruby libraries without being tied to a packaging system.</p>
+
+<p>In addition you will need to make sure you have a meta/ directory
+in you project files. This folder is used to store information
+Roll will need to make sense of your package. Be sure to read
+the Roll documentation to understand how this works. Note, the meta/
+files are also used by other tools, like <a href="reap.rubyforge.org">Reap</a>
+and <a href="sow.rubyforge.org">Sow</a>.
+
+<p>Your <i>distributable</i> project should follow the general conventions for
+any Ruby project. The typical project layout looks something like this.</p>
+
+<pre>
+    demo_rock/
+      bin/
+        ...
+      conf/
+        demo_rock/
+          ...
+      data/
+        demo_rock/
+          ...
+      lib/
+        demo_rock/
+          ...
+      meta/
+        data
+</pre>
+
+You can learn more about the conventional layout at <a href="setup.html">TODO</a>.</p>
+
+<p>We emphisis "distributable" because you can work on a project in a
+non-convential layout just so long as it is either rearranged to
+a conventional layout before packaging, or instructions are provided
+in the metadata so Roll can take into account the alternate arrangement
+itself.</p>
+
+
+<h2 id="ch_reap"> Reap and Sow Rock Too </h2>
+
+<p>Sow, the meta-package generator, also supports Rock. Rock can also be
+utilized via Reap's package task which depends on Sow.</p>
+
+
+<!-- CHOOSING -->
+
+<h1 id="ch_choose"> Rocking Your World </h1>
+
+
+<h2 id="ch_maint"> Benefits to Package Maintainers </h2>
+
+<p>Rocks distict advantage is in it's ability to drill-down into an archive, decompressing
+only the specific parts of an archive required. This is a boon to memory consumption.
+It makes it easy to retrive metadata from a package with out decompressing the 
+whole lot of it --which can be very large sometimes!</p>
+
+
+<h2 id="ch_gems"> Rocks and Gems </h2>
+
+<p>This section is more invloved when we consider Rolls too. So we will leave
+that to Rolls documentation. However we would like to encourge the Gems team
+to consider using Rock in place of there current format. The Rock format is a
+general solution that serves the requirements of their current special format
+--which was inspired by debian's own package format.</p>
+
+
+<h2 id="ch_concl"> Are You Ready to Rock? </h2>
+
+<p>Rock is the perfect compliment to tar. Being essentially the contrapositive
+of a .tar.gz (or other subcompression), it delivers the beneifts of these tar 
+formats with the added accessablity and low memory consumption.
+</p>
+
+<!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/ready.png"/></p> -->
+
+</div>
+
+<!--
+<div id="footnotes">
+Footnotes:<br/>
+[1] <a href="http://www.newsforge.com/article.pl?sid=05/06/08/136214&from=rss">Decline and fall of the version number</a>
+</div>
+-->
+
+<div id="copy">Copyright (c) 2006 Thomas Sawyer, all rights reserved.</div>
+
+</html>
