@@ -1,0 +1,3 @@
+Not Acknowledge. An alternatice to NilClass is cases where
+nil is a valid option, but an non-option still needs to
+be recorgnized.

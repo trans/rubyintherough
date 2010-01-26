@@ -1,0 +1,54 @@
+= OpenStructable
+
+  http://death.rubyforge.org
+
+
+== DESCRIPTION
+
+Not Acknowledge. An alternatice to NilClass is cases where
+nil is a valid option, but an non-option still needs to
+be recorgnized.
+
+
+== FEATURES/ISSUES
+
+* ... to be done ...
+* Needs to be expanded.
+
+
+== RELEASE NOTES
+
+Please see RELEASE file.
+
+
+== SYNOPSIS
+
+  ... to be done ...
+
+
+== HOW TO INSTALL
+
+Describe your installation procedure here.
+
+To install with RubyGems simply open a console and type:
+
+  gem install nackclass
+
+Local installation requires Setup.rb (gem install setup),
+then download the tarball package and type:
+
+  tar -xvzf nackclass-1.0.0.tgz
+  cd nackclass-1.0.0
+  sudo setup.rb all
+
+Windows users use 'ruby setup.rb all'.
+
+
+== COPYING
+
+Copyright (c) 2004 The Coding Dead
+
+This program is ditributed unser the terms of the LGPLv3 license.
+
+See LICENSE file for details.
+
