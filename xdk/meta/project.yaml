@@ -1,0 +1,24 @@
+---
+project    : xdk
+
+contact    : Trans <transfire@gmail.com>
+license    : MIT
+created    : 2008-02-22
+homepage   : http://xkd.rubyforge.org
+repository : http://xkd.rubyforge.org/svn
+
+# Title. This defaults to project capitalized, if not given.
+title      : XDK
+
+brief      : XML Design Kit
+
+description: >
+  XML Design Kit provides an XML schema DSL for creating
+  XML blockup builders, as well as parsing and validating
+  XML documents.
+
+exclude    : [ work, doc, ri ]
+
+dependency :
+  - [facets, '>= 2.3.0']
+

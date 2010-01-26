@@ -1,0 +1,50 @@
+= XDK
+
+  http://xdk.rubyforge.org
+
+
+== INTRODUCTION
+
+XML Design Kit provides an XML schema DSL for creating XML blockup builders, as well as parsing and validating XML documents.
+
+
+== RELEASE NOTES
+
+Please see NOTES file.
+
+
+== RECENT CHANGES
+
+Please see CHANGES file.
+
+
+== HOW TO INSTALL
+
+Describe your installation procedure here.
+
+To install with RubyGems simply open a console and type:
+
+  gem install xkd
+
+To manually installation, download the tgz package and type:
+
+  tar -xvzf xkd-x.y.z.tgz
+  cd xkd-x.y.z.tgz
+  rake config
+  rake setup
+  rake install
+
+
+== USAGE
+
+Describe how to use your library or application here.
+
+
+== LICENSE
+
+  Copyright (c) 2008 
+
+  This program is ditributed unser the terms of the MIT license.
+
+  Please see COPYING file.
+

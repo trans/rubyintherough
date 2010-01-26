@@ -1,0 +1,29 @@
+= Change History
+
+(See log/changelog.txt for full commit log.)
+
+== 0.3.5 / 2007-12-16
+
+* Improved cssfilter.rb; now far enough along to be useful.
+
+== 0.3.4 / 2007-12-14
+
+* Added css.rb and cssfilter.rb. Both are in early developemnt stage.
+* Fixed escaping of DesignKit attributes.
+
+== 0.3.3 / 2007-12-05
+
+* Design kit can now add arbitray elements for open elements.
+* Improvements to XML Design Kit (API is starting to stablize).
+* Improved ATOM feed.
+
+== 0.3.2 / 2007-11-28
+
+* Created XmlDesignKit to facilitate support for a variety of XML formats.
+* First format using XmlDesignKit is Atom feeds.
+
+== 0.3.1 / 2007-11-13
+
+* Ported nitro/glue's UriUtils module.
+* Ported nitro/raw's atom.rb (but it needs work!)
+

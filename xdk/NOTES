@@ -1,0 +1,11 @@
+= Releas Notes
+
+==
+
+== To Do
+
+* Covert xml.rb and html.rb to use designkit?
+* Which is better? DesignKit or BuildingBlock
+  * BuildingBlock is easy to create specialized elements --they are just methods.
+  * DesignKit allows for stricter control of documents schema.
+
