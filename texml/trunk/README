@@ -1,0 +1,34 @@
+= TeXML
+
+* http://death.rubyforge.org
+* http://death.rubyforge.org/texml
+
+
+== DESCRIPTION
+
+Convert Tex documents to XML and vice-versa.
+
+This library was writen by Pierre-Charles David (pcdavid@emn.fr).
+It is being host by TigerOps for prosterity or until someone
+comes along and adopts it.
+
+
+== TODO
+
+* Convert Tex to XML. Currently only works one way.
+* Use a different XML builder library.
+
+
+== HOW TO INSTALL
+
+  $ gem install texml
+
+
+== LEGAL NOTICE
+
+GPL License
+
+Copyright (c) 2004 Pierre-Charles David <pcdavid@emn.fr>
+
+See COPYING for details.
+

@@ -1,0 +1,8 @@
+---
+tarball:
+  service: Tarball
+  include: ~
+  exclude: [doc, work]
+  ignore : ~
+  active : true
+

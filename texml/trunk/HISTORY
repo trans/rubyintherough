@@ -1,0 +1,18 @@
+= HISTORY
+
+=== 0.3.0 / 2008-11-29
+
+This is the initial and perhaps only release of TeXML.
+The script simply converts Tex documents to an equivalent
+XML format and vice-versa. (Actually only XML -> Tex currenly is implemented.)
+
+This library was writen by Pierre-Charles David (pcdavid@emn.fr).
+It is being host by TigerOps for prosterity or until someone
+comes along and adopts it.
+
+Changes:
+
+* 1 Major Enhancement
+
+    * Happy Re-Brithday!
+

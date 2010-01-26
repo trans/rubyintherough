@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+# Usage: % texml < input.xml > output.tex
+
+require "texml"
+
+TeXML.main
+

@@ -1,0 +1,137 @@
+
+	
+	\documentclass{report} 
+	\usepackage{fancyheadings} 
+	\usepackage{longtable} 
+	
+	\title{ORDER} 
+	\author{} 
+	
+	\setlength{\hoffset }{-.5in} 
+	\setlength{\voffset }{-.5in} 
+	\setlength{\textwidth }{7in} 
+	\setlength{\textheight }{9in} 
+	\setlength{\topmargin }{0in} 
+	\setlength{\headheight }{.5in} 
+	\setlength{\headsep }{.1in} 
+	\setlength{\oddsidemargin }{0in} 
+	\setlength{\marginparsep }{0in} 
+	\setlength{\marginparwidth }{0in} 
+	\setlength{\parindent }{0em} 
+	\pagestyle{fancy} 
+	\setlength{\headrulewidth }{0pt} 
+	
+	\rhead{\Large No. } 
+	\chead{\Large \bfseries SALES ORDER} 
+	\lhead{\Large } 
+	
+	\rfoot{\small Page \thepage } 
+	\cfoot{\scshape } 
+	\lfoot{\small LaTex} 
+	
+	\begin{document}
+
+		
+		\begin{center}
+
+		
+			\Large \scshape  \\
+			\normalsize ATTN: , Sales Agent \\
+			 \\
+			 Fax:  \\
+			
+	
+			\vspace{.2in} 
+			
+			\begin{tabular}
+
+				
+				\hline 
+				\parbox[b]{.3\linewidth } 
+				\begin{center}
+
+					\normalsize \bfseries  BILL TO \\
+					\normalfont \vspace{.1in} \small 
+					 \\
+					 \\
+					 Fax:  \\
+					 \\
+				\end{center}
+
+				&
+				\parbox[b]{.3\linewidth } 
+				\begin{center}
+
+					\normalsize \bfseries  SHIP TO \\
+					\normalfont \vspace{.1in} \small 
+					 \\
+					 \\
+					 Fax:  \\
+					 \\
+				\end{center}
+
+				\scshape  Terms:  & Via:  \\
+				\scshape  Fee:  & ETA:  \\
+			\end{tabular}
+
+		
+		\end{center}
+
+	
+		\small 
+		\setlongtables 
+		\setlength{\LTleft }{0pt} 
+		\setlength{\LTright }{0pt} 
+		
+		\begin{longtable}
+
+			
+			# & Qty & Unit & Part No. & Description & Price & Disc. & Ext. \\
+			\hline 
+			\endhead 
+			\multicolumn{8}{1}{\sl  -continued on next page- } 
+			\endfoot 
+			\multicolumn{8}{1}{\sl  -end of detail- } 
+			\endlastfoot 
+			 &  &  &  &  &  &  &  \\
+		\end{longtable}
+
+
+		\begin{tabular*}
+
+			
+			
+			
+		
+			\begin{tabular}
+
+				
+				
+				\normalsize \scshape  Notes: & \normalfont   \vspace{.25in}  \\
+				\scshape  Verify: & X \\
+				\cline{2-2} 
+			\end{tabular}
+
+			
+			&
+			
+			\begin{tabular}
+
+				
+				\Large  Subtotal: & \Large   \\
+				\cline{2-2} 
+				\Large  Tax: & \Large   \\
+				\Large  Fee: & \Large   \\
+				\Large  Grand Total: & \Large   \\
+				\cline{2-2} 
+				\Large  Balance: & \Large   \\
+				\cline{2-2} 
+			\end{tabular}
+
+			
+		\end{tabular*}
+
+	
+	\end{document}
+
+

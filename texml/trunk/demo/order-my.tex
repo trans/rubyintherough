@@ -1,0 +1,130 @@
+% LaTeX input file
+%
+%============================================
+%
+% Sales Order Template for SQL-Ledger
+%
+% Contributors:
+% Thomas Sawyer
+%
+% LOG:
+% 2001-02-21 TS. Created
+%
+%============================================
+
+%
+\documentclass{report}
+\usepackage{fancyheadings}
+\usepackage{longtable}
+
+% preamble
+\title{ORDER}
+\author{~~salesagent~~}
+
+% layout
+\setlength{\hoffset}{-.5in}
+\setlength{\voffset}{-.5in}
+\setlength{\textwidth}{7in}
+\setlength{\textheight}{9in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{.5in}
+\setlength{\headsep}{.1in}
+\setlength{\footskip}{.5in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\marginparsep}{0in}
+\setlength{\marginparwidth}{0in}
+\setlength{\parindent}{0em}
+\pagestyle{fancy}
+\setlength{\headrulewidth}{0pt}
+
+% page-header
+\rhead{\Large No. ~~ordnumber~~}
+\chead{\huge \bfseries SALES ORDER}
+\lhead{\Large ~~transdate~~}
+
+% page-footer
+\lfoot{\small Page \thepage}
+\cfoot{\scshape ~~CompanyName~~}
+\rfoot{\small \LaTeX}
+
+% begin document
+\begin{document}
+
+% report-header
+\begin{center}
+\Large \scshape ~~CompanyName~~ \\
+\normalsize ATTN: ~~salesagent~~, Sales Agent \\
+~~companyaddr1~~, ~~companyaddr2~~ \\
+~~companyphone~~ Fax:~~compnayfax~~ \\
+~~comapnyemail~~
+
+\vspace{.2in}
+
+\begin{tabular}{c|c}
+\hline
+\parbox[b]{.3\linewidth}{\begin{center} 
+\normalsize \bfseries BILL TO \\
+\normalfont \vspace{.1in}
+\small ~~name~~ \\
+~~addr1~~ \\
+~~addr2~~ \\
+~~addr3~~ \\
+~~phone~~ Fax:~~fax~~ \\
+~~email~~
+\end{center}}
+&
+\parbox[b]{.3\linewidth}{\begin{center} 
+\normalsize \bfseries SHIP TO \\
+\normalfont \vspace{.1in}
+\small ~~shiptoname~~ \\
+~~shiptoaddr1~~ \\
+~~shiptoaddr2~~ \\
+~~shiptoaddr3~~ \\
+~~shiptophone~~ Fax:~~shiptofax~~ \\
+~~shiptoemail~~
+\end{center} } \\
+\scshape Terms: ~~terms~~ & \scshape Via: ~~shipvia~~ \\
+\scshape Fee: ~~penalty~~\%/mo & \scshape Eta: ~~eta~~
+\end{tabular}
+\end{center}
+
+% Detail
+\small
+\setlongtables
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|r|r|r|p{1.25in}|p{2.5in}|@{\extracolsep{\fill}}r|c|r|}
+\# & Qt'y & Unit & Part No. & Description & Price & Disc. & Ext. \\
+\hline
+\endhead
+\multicolumn{8}{l}{\sl -continued on next page-}
+\endfoot
+\multicolumn{8}{l}{\sl -end of detail-}
+\endlastfoot
+~~l~~ & ~~qty~~ & ~~unit~~ & ~~partno~~ & ~~description~~   & \$~~sellprice~~ & ~~discount~~\% & \$~~ext~~ \\
+\end{longtable}
+
+% report-footer
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r@{}}
+  \begin{tabular}[b]{p{.5in}p{3in}}
+    \normalsize \scshape Notes: & \normalfont ~~notes~~
+    \vspace{.25in} \\
+    \scshape Verify: & X \\
+    \cline{2-2}
+  \end{tabular}
+  &
+  \begin{tabular}{rr}
+    \Large Sub Total & \Large \$~~netamount~~ \\ 
+    \cline{2-2}
+    Tax & \$~~tax~~ \\
+    Freight & \$~~freight~~ \\
+    \Large Grand Total & \Large \$~~amount~~ \\
+    \cline{2-2}
+    Deposit & -\$~~deposit~~ \\
+    \Large Balance Due & \Large \bfseries \$~~balance~~ \\
+    \cline{2-2}
+  \end{tabular}
+\end{tabular*}
+
+% end document
+\end{document}

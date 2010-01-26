@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+
+<TeXML>
+	
+	<cmd name="documentclass"><parm>report</parm></cmd>
+	<cmd name="usepackage"><parm>fancyheadings</parm></cmd>
+	<cmd name="usepackage"><parm>longtable</parm></cmd>
+	
+	<cmd name="title"><parm>ORDER</parm></cmd>
+	<cmd name="author"><parm><xts:var name="rep" /></parm></cmd>
+	
+	<cmd name="setlength"><parm><cmd name="hoffset" /></parm><parm>-.5in</parm></cmd>
+	<cmd name="setlength"><parm><cmd name="voffset" /></parm><parm>-.5in</parm></cmd>
+	<cmd name="setlength"><parm><cmd name="textwidth" /></parm><parm>7in</parm></cmd>
+	<cmd name="setlength"><parm><cmd name="textheight" /></parm><parm>9in</parm></cmd>
+	<cmd name="setlength"><parm><cmd name="topmargin" /></parm><parm>0in</parm></cmd>
+	<cmd name="setlength"><parm><cmd name="headheight" /></parm><parm>.5in</parm></cmd>
+	<cmd name="setlength"><parm><cmd name="headsep" /></parm><parm>.1in</parm></cmd>
+	<cmd name="setlength"><parm><cmd name="oddsidemargin" /></parm><parm>0in</parm></cmd>
+	<cmd name="setlength"><parm><cmd name="marginparsep" /></parm><parm>0in</parm></cmd>
+	<cmd name="setlength"><parm><cmd name="marginparwidth" /></parm><parm>0in</parm></cmd>
+	<cmd name="setlength"><parm><cmd name="parindent" /></parm><parm>0em</parm></cmd>
+	<cmd name="pagestyle"><parm>fancy</parm></cmd>
+	<cmd name="setlength"><parm><cmd name="headrulewidth" /></parm><parm>0pt</parm></cmd>
+	
+	<cmd name="rhead"><parm><cmd name="Large" />No. <xts:var name="record" /></parm></cmd>
+	<cmd name="chead"><parm><cmd name="Large" /><cmd name="bfseries" />SALES ORDER</parm></cmd>
+	<cmd name="lhead"><parm><cmd name="Large" /><xts:var name="date" /></parm></cmd>
+	
+	<cmd name="rfoot"><parm><cmd name="small" />Page <cmd name="thepage" /></parm></cmd>
+	<cmd name="cfoot"><parm><cmd name="scshape" /><xts:var name="name" /></parm></cmd>
+	<cmd name="lfoot"><parm><cmd name="small" />LaTex</parm></cmd>
+	
+	<env name="document">
+		
+		<env name="center">
+		
+			<cmd name="Large" /><cmd name="scshape" /><xts:var name="name" /> <spec cat="esc" /><spec cat="esc" />
+			<cmd name="normalsize" />ATTN: <xts:var name="rep" />, Sales Agent <spec cat="esc" /><spec cat="esc" />
+			<xts:var name="address" /> <spec cat="esc" /><spec cat="esc" />
+			<xts:var name="phone" /> Fax: <xts:var name="fax" /> <spec cat="esc" /><spec cat="esc" />
+			<xts:var name="email" />
+	
+			<cmd name="vspace"><parm>.2in</parm></cmd>
+			
+			<env name="tabular">
+				<parm>c|c</parm>
+				<cmd name="hline" />
+				<cmd name="parbox">
+					<opt>b</opt>
+					<parm>.3<cmd name="linewidth" /></parm>
+				</cmd>
+				<env name="center">
+					<cmd name="normalsize" /><cmd name="bfseries" /> BILL TO <spec cat="esc" /><spec cat="esc" />
+					<cmd name="normalfont" /><cmd name="vspace"><parm>.1in</parm></cmd><cmd name="small" />
+					<xts:var name="name" /> <spec cat="esc" /><spec cat="esc" />
+					<xts:var name="address" /> <spec cat="esc" /><spec cat="esc" />
+					<xts:var name="phone" /> Fax: <xts:var name="fax" /> <spec cat="esc" /><spec cat="esc" />
+					<xts:var name="email" /> <spec cat="esc" /><spec cat="esc" />
+				</env>
+				<spec cat="align" />
+				<cmd name="parbox">
+					<opt>b</opt>
+					<parm>.3<cmd name="linewidth" /></parm>
+				</cmd>
+				<env name="center">
+					<cmd name="normalsize" /><cmd name="bfseries" /> SHIP TO <spec cat="esc" /><spec cat="esc" />
+					<cmd name="normalfont" /><cmd name="vspace"><parm>.1in</parm></cmd><cmd name="small" />
+					<xts:var name="name" /> <spec cat="esc" /><spec cat="esc" />
+					<xts:var name="address" /> <spec cat="esc" /><spec cat="esc" />
+					<xts:var name="phone" /> Fax: <xts:var name="fax" /> <spec cat="esc" /><spec cat="esc" />
+					<xts:var name="email" /> <spec cat="esc" /><spec cat="esc" />
+				</env>
+				<cmd name="scshape" /> Terms: <xts:var name="terms" /> <spec cat="align" /> Via: <xts:var name="shipvia" /> <spec cat="esc" /><spec cat="esc" />
+				<cmd name="scshape" /> Fee: <xts:var name="penalty" /> <spec cat="align" /> ETA: <xts:var name="eta" /> <spec cat="esc" /><spec cat="esc" />
+			</env>
+		
+		</env>
+	
+		<cmd name="small" />
+		<cmd name="setlongtables" />
+		<cmd name="setlength"><parm><cmd name="LTleft" /></parm><parm>0pt</parm></cmd>
+		<cmd name="setlength"><parm><cmd name="LTright" /></parm><parm>0pt</parm></cmd>
+		
+		<env name="longtable">
+			<parm>|r|r|r|p<spec cat="bg" />1.25in<spec cat="eg" />|p<spec cat="bg" />2.5in<spec cat="eg" />|@<spec cat="bg" /><cmd name="extracolsep"><parm><cmd name="fill" /></parm></cmd><spec cat="eg" />r|c|r|</parm>
+			<spec cat="parm" /> <spec cat="align" /> Qty <spec cat="align" /> Unit <spec cat="align" /> Part No. <spec cat="align" /> Description <spec cat="align" /> Price <spec cat="align" /> Disc. <spec cat="align" /> Ext. <spec cat="esc" /><spec cat="esc" />
+			<cmd name="hline" />
+			<cmd name="endhead" />
+			<cmd name="multicolumn"><parm>8</parm><parm>1</parm><parm><cmd name="sl" /> -continued on next page- </parm></cmd>
+			<cmd name="endfoot" />
+			<cmd name="multicolumn"><parm>8</parm><parm>1</parm><parm><cmd name="sl" /> -end of detail- </parm></cmd>
+			<cmd name="endlastfoot" />
+			<xts:var name="line" /> <spec cat="align" /> <xts:var name="qty" /> <spec cat="align" /> <xts:var name="unit" /> <spec cat="align" /> <xts:var name="partno" /> <spec cat="align" /> <xts:var name="descript" /> <spec cat="align" /> <xts:var name="sellprice" /> <spec cat="align" /> <xts:var name="disc" /> <spec cat="align" /> <xts:var name="ext" /> <spec cat="esc" /><spec cat="esc" />
+		</env>
+
+		<env name="tabular*">
+			
+			<parm><cmd name="textwidth" /></parm>
+			<parm>l@<spec cat="bg" /><cmd name="extracolsep"><parm><cmd name="fill" /></parm></cmd><spec cat="eg" />r@<spec cat="bg" /><spec cat="eg" /></parm>
+		
+			<env name="tabular">
+				<opt>b</opt>
+				<parm>p<spec cat="bg" />.5in<spec cat="eg" />p<spec cat="bg" />3in<spec cat="eg" /></parm>
+				<cmd name="normalsize" /><cmd name="scshape" /> Notes: <spec cat="align" /> <cmd name="normalfont" /> <xts:var name="notes" /> <cmd name="vspace"><parm>.25in</parm></cmd> <spec cat="esc" /><spec cat="esc" />
+				<cmd name="scshape" /> Verify: <spec cat="align" /> X <spec cat="esc" /><spec cat="esc" />
+				<cmd name="cline"><parm>2-2</parm></cmd>
+			</env>
+			
+			<spec cat="align" />
+			
+			<env name="tabular">
+				<parm>rr</parm>
+				<cmd name="Large" /> Subtotal: <spec cat="align" /> <cmd name="Large" /> <xts:var name="subtotal" /> <spec cat="esc" /><spec cat="esc" />
+				<cmd name="cline"><parm>2-2</parm></cmd>
+				<cmd name="Large" /> Tax: <spec cat="align" /> <cmd name="Large" /> <xts:var name="tax" /> <spec cat="esc" /><spec cat="esc" />
+				<cmd name="Large" /> Fee: <spec cat="align" /> <cmd name="Large" /> <xts:var name="fee" /> <spec cat="esc" /><spec cat="esc" />
+				<cmd name="Large" /> Grand Total: <spec cat="align" /> <cmd name="Large" /> <xts:var name="grandtotal" /> <spec cat="esc" /><spec cat="esc" />
+				<cmd name="cline"><parm>2-2</parm></cmd>
+				<cmd name="Large" /> Balance: <spec cat="align" /> <cmd name="Large" /> <xts:var name="balance" /> <spec cat="esc" /><spec cat="esc" />
+				<cmd name="cline"><parm>2-2</parm></cmd>
+			</env>
+			
+		</env>
+	
+	</env>
+
+</TeXML>
